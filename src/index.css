@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Balconcitos de Colores - Design System
+Inspired by Quebrada de Humahuaca colors and Andean culture
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 35 15% 97%;
+    --foreground: 20 25% 15%;
+
+    --card: 35 25% 95%;
+    --card-foreground: 20 25% 15%;
+
+    --popover: 35 25% 95%;
+    --popover-foreground: 20 25% 15%;
+
+    /* Quebrada-inspired primary colors - Golden ochre */
+    --primary: 35 65% 45%;
+    --primary-foreground: 35 15% 97%;
+    --primary-glow: 35 75% 55%;
+
+    /* Terracotta secondary - Mountain red */
+    --secondary: 15 55% 35%;
+    --secondary-foreground: 35 15% 97%;
+
+    --muted: 35 20% 90%;
+    --muted-foreground: 20 15% 45%;
+
+    /* Jade green accent - Andean vegetation */
+    --accent: 150 35% 45%;
+    --accent-foreground: 35 15% 97%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 35 15% 97%;
+
+    --border: 35 25% 85%;
+    --input: 35 25% 92%;
+    --ring: 35 65% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients for Quebrada atmosphere */
+    --gradient-sunset: linear-gradient(135deg, hsl(35, 65%, 45%), hsl(15, 55%, 35%), hsl(350, 45%, 40%));
+    --gradient-mountain: linear-gradient(180deg, hsl(35, 25%, 95%), hsl(35, 35%, 85%));
+    --gradient-hero: linear-gradient(135deg, hsl(35, 65%, 45%) 0%, hsl(15, 55%, 35%) 50%, hsl(150, 35%, 45%) 100%);
+    
+    /* Shadows with warm tones */
+    --shadow-warm: 0 10px 30px -10px hsl(35, 65%, 45%, 0.3);
+    --shadow-card: 0 4px 20px -8px hsl(20, 25%, 15%, 0.15);
+    --shadow-glow: 0 0 40px hsl(35, 75%, 55%, 0.4);
+
+    /* Animation timings */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 20 25% 8%;
+    --foreground: 35 15% 97%;
+
+    --card: 20 25% 10%;
+    --card-foreground: 35 15% 97%;
+
+    --popover: 20 25% 10%;
+    --popover-foreground: 35 15% 97%;
+
+    /* Dark mode primary - Golden ochre remains warm */
+    --primary: 35 65% 55%;
+    --primary-foreground: 20 25% 8%;
+    --primary-glow: 35 75% 65%;
+
+    /* Dark secondary - Warmer terracotta */
+    --secondary: 15 45% 25%;
+    --secondary-foreground: 35 15% 97%;
+
+    --muted: 20 20% 15%;
+    --muted-foreground: 35 15% 65%;
+
+    /* Dark accent - Jade green softer */
+    --accent: 150 25% 35%;
+    --accent-foreground: 35 15% 97%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 35 15% 97%;
+
+    --border: 20 25% 18%;
+    --input: 20 25% 15%;
+    --ring: 35 65% 55%;
+
+    /* Updated gradients for dark mode */
+    --gradient-sunset: linear-gradient(135deg, hsl(35, 65%, 55%), hsl(15, 45%, 25%), hsl(350, 35%, 30%));
+    --gradient-mountain: linear-gradient(180deg, hsl(20, 25%, 10%), hsl(20, 30%, 15%));
+    --gradient-hero: linear-gradient(135deg, hsl(35, 65%, 55%) 0%, hsl(15, 45%, 25%) 50%, hsl(150, 25%, 35%) 100%);
+    
+    /* Dark mode shadows */
+    --shadow-warm: 0 10px 30px -10px hsl(35, 65%, 55%, 0.4);
+    --shadow-card: 0 4px 20px -8px hsl(20, 25%, 5%, 0.6);
+    --shadow-glow: 0 0 40px hsl(35, 75%, 65%, 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
